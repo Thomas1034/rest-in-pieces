@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "rest-in-pieces",
+	"version": "${version}",
+	"name": "Rest in Pieces",
+	"description": "Changes the bed recipe to require cloth, which is dropped by zombies.",
+	"authors": [
+		"Startraveler"
+	],
+	"license": "Apache 2.0",
+	"icon": "assets/rest-in-pieces/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.startraveler.RestInPieces"
+		],
+		"client": [
+			"com.startraveler.RestInPiecesClient"
+		],
+		"fabric-datagen": [
+			"com.startraveler.RestInPiecesDataGenerator"
+		]
+	},
+	"mixins": [
+		"rest-in-pieces.mixins.json",
+		{
+			"config": "rest-in-pieces.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

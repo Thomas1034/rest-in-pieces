@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "rest-in-pieces:item/lime_cloth"
+  }
+}

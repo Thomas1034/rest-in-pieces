@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "cloth",
+  "ingredients": [
+    "minecraft:white_dye",
+    "#rest-in-pieces:cloths"
+  ],
+  "result": {
+    "count": 1,
+    "id": "rest-in-pieces:white_cloth"
+  }
+}
