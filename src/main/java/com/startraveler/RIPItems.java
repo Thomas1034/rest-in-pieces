@@ -40,7 +40,7 @@ public class RIPItems {
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, RestInPieces.id(name));
 
         // Create the item instance.
-        Item item = itemFactory.apply(settings.registryKey(itemKey));
+        Item item = itemFactory.apply(settings);
 
         // Register the item.
         Registry.register(Registries.ITEM, itemKey, item);
