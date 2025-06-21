@@ -10,14 +10,14 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-public class RIPItemTagProvider extends FabricTagProvider<Item> {
+public class RIPItemTagProvider extends FabricTagProvider.FabricValueLookupTagProvider<Item> {
     public RIPItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
-        super(output, RegistryKeys.ITEM, registriesFuture);
+        super(output, RegistryKeys.ITEM, registriesFuture, item -> item.getRegistryEntry().registryKey());
     }
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(RestInPieces.CLOTHS)
+        valueLookupBuilder(RestInPieces.CLOTHS)
                 .add(RIPItems.BLACK_CLOTH)
                 .add(RIPItems.GRAY_CLOTH)
                 .add(RIPItems.LIGHT_GRAY_CLOTH)
